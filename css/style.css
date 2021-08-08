@@ -49,7 +49,7 @@ li {
   letter-spacing: 0.03em;
 }
 .studio {
-  color: var( --primery-text-color);
+  color: var(--primery-text-color);
 }
 
 .nav-list .logo-text {
@@ -109,7 +109,6 @@ li {
 .button:focus svg {
   fill: var(--accent-color);
 }
-
 
 .container-box {
   max-width: 1600px;
@@ -275,7 +274,8 @@ h2.text {
 .desc-list button:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
-  box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
+  box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
+    0px 2px 2px rgb(0 0 0 / 12%);
 }
 
 .subtitle-text {
@@ -383,6 +383,30 @@ h2.text {
   margin-right: 0;
 }
 
+.thumb {
+  position: relative;
+}
+.thumb-card {
+  align-items: center;
+    justify-content: center;
+    display: flex;
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.thumb-card .thumb-text {
+  color: var(--white-color);
+  font-family: Roboto;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 .subtitle-text .item {
   margin-right: 30px;
   background: var(--white-color);
@@ -417,7 +441,8 @@ h2.text {
 
 .pic-link:hover,
 .pic-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .item .item-text {
@@ -507,14 +532,13 @@ h2.text {
 }
 .company-link {
   fill: #afb1b8;
-    padding: 16px 32px;
-    border: 1px solid #AFB1B8;
-    box-sizing: border-box;
-    border-radius: 4px;
- 
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 .company-box .company-link:last-child {
-  margin-right: 0; 
+  margin-right: 0;
 }
 .company-list:last-child {
   margin-right: 0;
@@ -522,7 +546,7 @@ h2.text {
 .company-icon {
   fill: #afb1b8;
 }
-.company-link:hover .company-icon, 
+.company-link:hover .company-icon,
 .company-link:focus .company-icon {
   fill: var(--accent-color);
 }
@@ -551,7 +575,6 @@ h2.text {
 .social-icon-footer {
   margin-left: 70px;
 }
-
 
 .join-link {
   width: 44px;
