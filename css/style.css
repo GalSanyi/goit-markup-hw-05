@@ -457,8 +457,30 @@ h2.text {
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
 }
+.thumb-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 63px 24px;
+}
+.thumb-text .text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
 
-.thumb-pic:hover::before {
+.thumb-pic:hover .thumb-text,
+.thumb-pic:focus .thumb-text {
+  opacity: 1;
+}
+
+.thumb-pic:hover::before,
+.thumb-pic:focus::before {
   opacity: 1;
 }
 
@@ -624,6 +646,9 @@ h2.text {
 .footer-link:last-child {
   margin-right: 0;
 }
+
+/* Modal icon */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -640,12 +665,24 @@ h2.text {
 .modal {
   position: absolute;
   top: 50%;
-  left: 50%; 
+  left: 50%;
 
   min-width: 528px;
   min-height: 581px;
   background-color: rgba(255, 255, 255, 1);
-  
+
   transform: translate(-50%, -50%);
- 
+}
+.close-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
