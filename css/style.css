@@ -105,6 +105,7 @@ li {
 .nav-list .menu-link:hover,
 .nav-list .menu-link:focus {
   color: var(--accent-color);
+  transition: color 250ms  var(--timing-function);
 }
 .list-text {
   display: flex;
@@ -129,6 +130,7 @@ li {
 .list-text .button:hover,
 .list-text .button:focus {
   color: var(--accent-color);
+  transition: color 250ms  var(--timing-function);
 }
 .button:hover svg,
 .button:focus svg {
@@ -301,6 +303,7 @@ h2.text {
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%),
     0px 2px 2px rgb(0 0 0 / 12%);
+    transition: color 250ms  var(--timing-function);
 }
 
 .subtitle-text {
