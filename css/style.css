@@ -5,6 +5,7 @@
   --white-color: #ffffff;
   --background-team-color: #f5f4fa;
   --border-text: #eeeeee;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -77,6 +78,30 @@ li {
   line-height: 16px;
   letter-spacing: 0.02em;
 }
+
+.menu-link-activ {
+  position: relative;
+  display: block;
+}
+.menu-link-activ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: tomato;
+  border-radius: 2px;
+  background: var(--accent-color);
+
+  transition: opacity 250ms var(--timing-function);
+}
+.menu-link:hover::after,
+.menu-link:focus::after {
+  opacity: 1;
+}
+
 .nav-list .menu-link:hover,
 .nav-list .menu-link:focus {
   color: var(--accent-color);
@@ -446,6 +471,10 @@ h2.text {
 }
 .thumb-pic {
   position: relative;
+  overflow: hidden;
+}
+.thumb-pic:hover.thumb-pic::before {
+  transform: translateY(0);
 }
 
 .thumb-pic::before {
@@ -455,7 +484,9 @@ h2.text {
   width: 100%;
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
 .thumb-text {
   position: absolute;
@@ -463,19 +494,6 @@ h2.text {
   left: 0;
   opacity: 0;
   padding: 63px 24px;
-}
-.activ {
-  position: relative;
-}
-.activ::after {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background: var(--accent-color);
-  border-radius: 2px;
-  bottom: -9px;
 }
 
 .thumb-text .text {
@@ -670,6 +688,9 @@ h2.text {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0, 2);
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+
 }
 .backdrop.is-hidden {
   opacity: 0;
