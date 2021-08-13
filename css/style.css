@@ -396,7 +396,7 @@ h2.text {
   bottom: 0;
   background-color: rgba(47, 48, 58, 0.8);
 }
-.thumb-card .thumb-text {
+.thumb-card .thumb-card-text {
   color: var(--white-color);
   font-family: Roboto;
 
@@ -464,6 +464,20 @@ h2.text {
   opacity: 0;
   padding: 63px 24px;
 }
+.activ {
+  position: relative;
+}
+.activ::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  bottom: -9px;
+}
+
 .thumb-text .text {
   font-family: Roboto;
   font-style: normal;
