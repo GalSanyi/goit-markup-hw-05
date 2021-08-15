@@ -77,6 +77,7 @@ li {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  transition: color 250ms  var(--timing-function);
 }
 
 .menu-link-activ {
@@ -105,7 +106,7 @@ li {
 .nav-list .menu-link:hover,
 .nav-list .menu-link:focus {
   color: var(--accent-color);
-  transition: color 250ms  var(--timing-function);
+ 
 }
 .list-text {
   display: flex;
@@ -130,7 +131,7 @@ li {
 .list-text .button:hover,
 .list-text .button:focus {
   color: var(--accent-color);
-  transition: color 250ms  var(--timing-function);
+  
 }
 .button:hover svg,
 .button:focus svg {
@@ -471,32 +472,38 @@ h2.text {
 .pic-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    
 }
 .thumb-pic {
   position: relative;
   overflow: hidden;
 }
-.thumb-pic:hover.thumb-pic::before {
+.thumb-pic:hover .thumb-text,
+.thumb-pic:focus .thumb-text {
   transform: translateY(0);
 }
 
+
 .thumb-pic::before {
   display: inline-block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+ 
 }
+
+
 .thumb-text {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   padding: 63px 24px;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function) ;
 }
 
 .thumb-text .text {
@@ -507,6 +514,7 @@ h2.text {
   line-height: 28px;
   letter-spacing: 0.03em;
   color: #ffffff;
+
 }
 
 .thumb-pic:hover .thumb-text,
@@ -514,10 +522,7 @@ h2.text {
   opacity: 1;
 }
 
-.thumb-pic:hover::before,
-.thumb-pic:focus::before {
-  opacity: 1;
-}
+
 
 .item .item-text {
   border-right: 1px solid var(--border-text);
@@ -546,12 +551,16 @@ h2.text {
 .item .button {
   display: flex;
   align-items: center;
+  transition: color 250ms  var(--timing-function);
 }
 
 .item .icon-item {
   background: #f5f4fa;
   border-radius: 4px;
   padding: 25px 102px;
+}
+.list-icon-team {
+  fill: var(--primery-text-color);
 }
 
 /* social link */
@@ -570,6 +579,7 @@ h2.text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition:  background-color 250ms  var(--timing-function);
 }
 .social-link:hover .list-icon,
 .social-link:focus .list-icon {
@@ -578,7 +588,7 @@ h2.text {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  transition:  background-color 250ms  var(--timing-function);
+  
 }
 .social-link:last-child {
   margin-right: 0;
@@ -611,6 +621,8 @@ h2.text {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: fill 250ms var(--timing-function),
+   border 250ms var(--timing-function);
 }
 .company-box .company-link:last-child {
   margin-right: 0;
@@ -624,12 +636,12 @@ h2.text {
 .company-link:hover .company-icon,
 .company-link:focus .company-icon {
   fill: var(--accent-color);
-  transition: fill 250ms var(--timing-function);
+  
 }
 .company-link:hover,
 .company-link:focus {
   border: 1px solid #2196f3;
-  transition: border 250ms var(--timing-function);
+  
 
 }
 
@@ -662,6 +674,7 @@ h2.text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition:background-color 250ms var(--timing-function);
 }
 .join-link:hover .join-icon,
 .join-link:focus .join-icon {
@@ -670,13 +683,13 @@ h2.text {
 .join-link:hover,
 .join-link:focus {
   background-color: var(--accent-color);
-  transition:background-color 250ms var(--timing-function);
+  
 }
 .join-link:last-child {
   margin-right: 0;
 }
 .join-icon {
-  fill: #afb1b8;
+  fill: var(--white-color);
 }
 
 .footer-link {
@@ -695,7 +708,7 @@ h2.text {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0, 2);
+  background: rgba(0, 0, 0,  0.2);
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
 
@@ -703,6 +716,7 @@ h2.text {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
