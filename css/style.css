@@ -466,19 +466,13 @@ h2.text {
 .pic-link {
   display: block;
   text-decoration: none;
-}
-.pic-link:hover .thumb-text,
-.pic-link:focus .thumb-text {
-  transform: translateY(0);
+  
 }
 
-
-.pic-link:hover .thumb-text,
-.pic-link:focus .thumb-pic {
+.pic-link:hover,
+.pic-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-   
-
     
 }
 .thumb-pic {
@@ -487,7 +481,7 @@ h2.text {
 }
 .thumb-pic:hover .thumb-text,
 .thumb-pic:focus .thumb-text {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -498,6 +492,8 @@ h2.text {
 
 
 .thumb-text {
+  
+
   position: absolute;
   top: 0;
   left: 0;
@@ -515,8 +511,7 @@ h2.text {
 }
 
 .thumb-text .text {
-  
-
+ 
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
@@ -525,9 +520,12 @@ h2.text {
   letter-spacing: 0.03em;
   color: #ffffff;
   
-
 }
 
+.pic-link:hover .thumb-text,
+.pic-link:focus .thumb-text {
+  opacity: 1;
+}
 
 
 
