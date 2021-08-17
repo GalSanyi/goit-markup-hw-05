@@ -294,7 +294,7 @@ h2.text {
   padding: 6px 22px;
   border-radius: 4px;
   margin-right: 8px;
-  transition: background 250ms var(--timing-function), color 250ms var(--timing-function);
+  transition: background 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
 .desc-list button:hover,
@@ -305,7 +305,7 @@ h2.text {
     0px 2px 2px rgb(0 0 0 / 12%);
   
 }
-.
+
 
 .subtitle-text {
   display: flex;
@@ -466,6 +466,7 @@ h2.text {
 .pic-link {
   display: block;
   text-decoration: none;
+  transition:  box-shadow 250ms var(--timing-function);
 }
 
 .pic-link:hover,
