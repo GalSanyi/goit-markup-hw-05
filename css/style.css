@@ -524,11 +524,13 @@ h2.text {
 .button-icon {
   margin-right: 10px;
   fill: var(--title-text-color);
+  transition: fill 250ms var(--timing-function);
 }
 
 .contact-icon {
   margin-right: 10px;
   fill: var(--title-text-color);
+  transition: fill 250ms var(--timing-function);
 }
 
 .button:hover .button-icon {
